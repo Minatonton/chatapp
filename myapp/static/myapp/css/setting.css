@@ -1,0 +1,14 @@
+.botton{
+    display:block;
+    text-align: center;
+    border:solid 1px black;
+    border-radius: 20%;
+    text-decoration: none;
+    width: 20%;
+    margin: 1rem auto;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+}

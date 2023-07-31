@@ -1,0 +1,22 @@
+.user_image { 
+    width: 48px;
+    height: 48px;
+    display:flex;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+    justify-content: center;
+
+}
+.user_name{
+    /* display:flex; */
+    position: relative;
+    text-decoration: none;
+}
+.user_list{
+    /* border:solid;
+    color:black; */
+    display:flex;
+   border: solid 1px black;
+
+}

@@ -1,0 +1,12 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block header-title %}アイコン{% endblock %}
+{% block content %}
+<form method="post" action="{% url 'imgchange' %}"  enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form.errors }}
+        {{ form.as_p }}
+        <button type ="submit" >送信</button>
+</form>
+
+    {% endblock %}

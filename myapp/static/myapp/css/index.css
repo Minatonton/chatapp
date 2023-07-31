@@ -1,0 +1,24 @@
+ .index_main { 
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.7;
+    border: solid 2px black;
+    border-radius: 15px;
+    text-decoration: none;
+}
+.mains {   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    margin: auto;
+    height: 100vh;
+    flex-direction: column;
+}
+
+
+    

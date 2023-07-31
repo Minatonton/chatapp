@@ -1,1 +1,47 @@
-TR
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block extra_style %}
+<link rel="stylesheet" href="{%static 'myapp/css/talk_room.css' %}">
+{% endblock %}
+{% block header-title %}{{talk_list.username}}{% endblock %}
+
+    {% block button %}
+    <div class="friend_botton"><a href ='{% url "friends"%}' class="friends_shift">＜</a>
+    <!-- <div class ="your_friend_name">{{talk_list.username}}</div> -->
+    <a href="" class="reload_botton">更新</a></div>
+    {% endblock %}
+   
+
+
+
+
+
+{% block content %}
+<div class="talk_room">
+
+{% for talk in friend_information %}
+<div class="talk_list">
+<div class="name">>{{talk.talk_from}}
+</div>
+<div class="message ">{{talk.message}}</div>
+<div class="time">{{talk.talk_time}}</div>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}
+
+   
+
+{% block footer %}
+<footer class="footer">
+    <div class="footer-container">
+        <form method="POST" class="sendbox">
+            {% csrf_token %}
+            {{ form.error}}
+            {{form.message}}
+            <button type="submit" class="sendbox_button">送信</button> 
+        </form>
+    </div>
+</footer>
+{% endblock %}

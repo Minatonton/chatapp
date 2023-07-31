@@ -1,0 +1,12 @@
+{% extends "myapp/base.html" %}
+{% load static %}
+{% block header-title %}パスワード{% endblock %}
+{% block content %}
+<form method="post" action="{% url 'passwordchange' %}"  enctype="multipart/form-data">
+    {% csrf_token %}
+        {{ form.errors }}
+        {{ form.as_p }}
+        <button type ="submit" >送信</button>
+</form>
+
+    {% endblock %}
